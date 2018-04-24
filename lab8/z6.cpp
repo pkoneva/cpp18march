@@ -6,14 +6,11 @@ int main()
 	int ca, cb;
 	std::cin >> ca;// scanf;
 	std::cin >> cb;
-	if(ca>cb or ca<0 or cb>9){
+	if(ca+cb>10 or ca<0 or cb<0){
 		std::cout<<"not right"; 
 	}
-    else{    
-        std::string str = data.substr(ca, cb-ca+1);
+    else{ 
+    	   std::string str = data.replace(ca, cb, "");
         std::cout<< str;
     }
 }
-	
-		
-     	
