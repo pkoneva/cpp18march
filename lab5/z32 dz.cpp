@@ -7,7 +7,6 @@ int main()
 	if(x1<0 or x2<0 or y2<0 or y1<0 or w1<=0 or w2<=0 or h1<=0 or h2<=0){
 		printf("znachenie nepravil'noe");	
 	}
-	else{
 		if((x2<x1+w1 & x1<x2+w2 & x2+w2>x1+w1) or (x2==x1 & w2+x2>w1+x1)){
 			printf("{\"x\":%d, \"w\":%d", x2, (x1+w1-x2));
 		}
@@ -30,7 +29,7 @@ int main()
 			    }
 			}
 	     	
-		}
+		
 	if((y2<y1+h1 & y1<y2+h2 & y2+h2>h1+h1) or (y2==y1 & h2+y2>h1+y1)){
 			printf("{\"y\":%d, \"h\":%d", y2, (y1+h1-y2));
 		}
