@@ -14,11 +14,11 @@ int main()
 	}
 	else{
 		if(index!=-1){
-		    std::string str1=str.replace(index, 2, " ");
+		    std::string str1=str;
 		    do{	
-			    lengthA=lengthA+1;
-		        index=str1.find(a);
-			    str1=str.replace(index, 2, " ");
+		        str1=str1.replace(index, 2, " ");
+				index=str1.find(a);
+			    lengthStr=lengthStr+1;
 		    }
 		    while(lengthA<=lengthStr & index!=-1);
 			std::cout << str1;

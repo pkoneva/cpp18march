@@ -15,11 +15,13 @@ int main()
     	do{
 			index = str.find(x);
 			b=b+1;
+			
 			std::cout<<index;
 			index=index+1;
 			if(str.find(x, index)!=-1){
 			    index=str.find(x, index);
 		    	std::cout<<"\n"<<index;
+		    	a=a-1;
 			}
 	    }
 		while(index!=-1 & a>b);	
