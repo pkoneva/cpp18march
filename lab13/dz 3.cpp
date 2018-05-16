@@ -3,8 +3,8 @@
 #include <math.h>
 #include <stdexcept>
 #include <stdio.h>
-
-
+#include <sstream>
+using namespace std;
 int lab6task4(int a, int b){
     if(a<b) {
        throw std::invalid_argument("nepravil'nye znachenia");
@@ -24,14 +24,16 @@ std::string lab6task25(int y){
     if(y<=0){
     	throw std::invalid_argument("error");
     }
+    std::stringstream x;
 	while(t<y){
-    	std::cout << "#";
+    	x << "#";
     	t=t+1;
     }
     while(t<15){
-    	std::cout << ".";
+    	x << ".";
     	t=t+1;	
     }
+    return x.str();
 }
 
 
@@ -41,17 +43,20 @@ std::string lab6task22(int n){
 		throw std::invalid_argument("error");
 	}
 	else{
+		 std::stringstream x;
 		while(i<n){	
 	        i=i+1;
 		    if(i==5*k){
 			    k=k+1;
-		        std::cout<<"! ";
+		        x<<"! ";
 		    }
 		    else{
-		    	std::cout<<"!";
+		    	x<<"!";
 		    }
         }
+		 return x.str();
     }
+    
 }
 
 

@@ -2,13 +2,15 @@
 #include <string>
 #include "math.h"
 #include <stdio.h>
+#include <sstream>
 //?-последнее число 
-int lab6task2(int i){
-    while(i<47){
-    	i=i+1;
-    	std::cout<< i << " ";
+std::string lab6task2(int i){
+	std::stringstream str;
+    while(i<=47){
+    	str<<i<< " ";	
+	    i=i+1;
     }
-    return i;
+    return str.str();
 }
 
 int lab6task15(int n){
@@ -87,7 +89,7 @@ int lab6task36(int a, int b){
 
 
 int main(){
-	std::cout<< lab6task2(16)<<"\n\n\n";
+	std::cout<< lab6task2(17)<<"\n\n\n";
 	
 	std::cout<<lab6task15(20)<<"\n\n";
 	
